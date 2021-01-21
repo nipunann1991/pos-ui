@@ -1,0 +1,37 @@
+@import "../../../../styles";
+
+.user{
+    padding: 2.5rem 0;
+
+    .user-img{ 
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+        @include background-opacity($white, 0.1)
+    }
+}
+
+ul.main-nav{
+    padding-left: 0;
+    margin: 0;
+
+    li{
+        text-align: center;
+
+        a{
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+            padding: 1.5rem;
+            color: $white;
+            display: block;
+            text-decoration: none;
+
+            &:hover{
+                background: $white;
+                color: $nav-color;
+            }
+        }
+    }
+}

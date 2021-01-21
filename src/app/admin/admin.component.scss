@@ -1,0 +1,31 @@
+@import "../../styles";
+
+
+.page-content-wrapper{
+    @include flex();
+    height: 100%;
+    width: 100%;
+
+    .left-nav-area{
+        width: 7rem;
+        background: $nav-color;
+        height: inherit;
+        position: fixed;
+        left: 0;
+    }
+
+    .right-content-area{
+        padding-top: 5rem;
+        padding-left: 7rem; 
+        width: 100%;
+
+        .header-area{ 
+            position: fixed;
+            background: $white; 
+            @include calc('width', '100% - 7rem');
+            right: 0;
+            top: 0;
+        }
+        
+    }
+}
