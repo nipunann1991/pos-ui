@@ -1,9 +1,9 @@
 
-<div class="page-content-wrapper">
-    <div class="left-nav-area">
-        <app-nav></app-nav>
+<div class="page-content-wrapper" [ngClass]="animateView">
+    <div class="left-nav-area" *ngIf="!isShopView">
+        <app-nav></app-nav> 
     </div>
-    <div class="right-content-area">
+    <div class="right-content-area" [ngClass]="{'shop-view': isShopView}">
         <div class="header-area">
             <app-header></app-header>
         </div>
@@ -12,3 +12,4 @@
 </div>
 
 
+ 

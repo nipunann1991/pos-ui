@@ -1,0 +1,18 @@
+
+<div class="shops-list-wrapper">
+    <h1>Select Your Shop</h1>
+    <ul class="shops-list">
+        <li class="shop add-new" (click)="openDialog()">
+            <button mat-button>
+                <i class="icon-add"></i>
+            </button> 
+       </li>
+        <li class="shop" *ngFor="let shop of shopList" [routerLink]="shop.shop_url">
+            <button mat-button>
+                <img [src]="shop.image_url" alt="">
+                <h3>{{ shop.shop_name }}</h3>
+            </button> 
+        </li> 
+
+    </ul>
+</div>

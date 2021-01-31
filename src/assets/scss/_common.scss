@@ -17,7 +17,8 @@ html{
  
 
 body{   
-	font-size: 1.6rem;	    
+	font-size: 1.6rem;	  
+	font-family: 'Lato', sans-serif;
 }
 
 html, body{   
@@ -32,4 +33,199 @@ label{
 }
 .clearboth{
   clear: both;
+}
+
+
+.mat-body, .mat-body-1, .mat-typography{
+ font: initial;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Lato', sans-serif !important;
+	font-weight: 700;
+}
+
+ 
+
+.btn-primary{
+	background: lighten($basic-btn-color, 15%);
+
+	&:hover, &:focus{
+		background: lighten($basic-btn-color, 25%) !important;
+	}
+}
+
+.mat-body, .mat-body-1, .mat-typography, .mat-button, .mat-raised-button{
+	font-family: 'Lato', sans-serif;
+}
+
+
+.mat-button, .mat-raised-button{
+	font-size: 1.6rem;
+	line-height: 3.8rem !important;
+	
+}
+ 
+
+a{
+	color: lighten($basic-btn-color, 15%);
+
+	&:hover{
+		color: lighten($basic-btn-color, 25%);
+	}
+}
+
+
+.form-group {
+	margin-bottom: 1.5rem;
+	
+	.form-control{ 
+		font-size: 1.6rem;
+		min-height: 4rem;
+	}
+}
+
+
+.image-upload-area{
+	height: 25rem;
+	width: 100%;
+	border: 1px $form-control-border-color solid; 
+	margin-top: 2.5rem;
+	border-radius: 0.5rem;
+	position: relative;
+	@include flex-center();
+	
+
+	.img-content-wrapper{
+		position: absolute;
+		width: 100%;
+		height: 100%; 
+		justify-content: center;
+		flex-direction: column;
+		@include flex-center();
+
+		i{
+			font-size: 5rem;
+		}
+	}
+	 
+	input{
+		height: 100%;
+		opacity: 0;
+	}
+}
+
+
+.inner-page-wrapper{
+	padding: 3.5rem 5rem;
+	height: 100%;
+
+	.page-title-area{
+		@include flex-center();
+		margin-bottom: 2rem;
+
+		h1{
+			font-size: 3rem;
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+
+		button.mat-raised-button{
+			margin-left: auto;
+			font-weight: 400;
+			line-height: 3.8rem;
+			background: $pink-color;
+
+			i.icon-plus{
+				position: relative;
+				top: -0.1rem;
+				margin-right: 0.5rem;
+			}
+		}
+
+	}
+
+	.white-box-panel{
+		width: 100%;
+		height: 100%;
+		background: $white;
+		@include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
+		padding: 3rem;
+		border-radius: 0.5rem; 
+
+		form.search-input{
+			width: 30rem;
+			margin-bottom: 1.5rem;
+			position: relative; 
+
+			i.search-icon{
+				color: lighten($text-color, 40%);
+				position: absolute;
+				left: 1.2rem;
+				top: 1rem;
+			}
+
+			input.form-control{
+				padding-left: 4rem;
+				font-size: 1.6rem;
+				min-height: 3.4rem;
+			}
+		}
+
+		.table{
+			thead{
+				line-height: 2.5rem;
+				background: #f8f8f8;
+
+				th{
+					border-bottom: 0;
+				}
+			}
+			td, th{
+				line-height: 2.5rem;
+
+				a{
+					text-decoration: none;
+
+					&.edit-btn{
+						margin-right: 1rem;
+						color: lighten($text-color, 25%);
+					}
+
+					&.delete-btn{
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.popup-wrapper{ 
+
+	.popup-header{
+		border-bottom: 1px #6c6c6c solid;
+		padding-bottom: 1.2rem;
+		margin-bottom: 1.5rem;
+		@include flex();
+
+		h2{ 
+			font-weight: 900;
+			line-height: 1.1;
+			margin: 0;
+			padding: 0;
+		}
+
+		button.close{
+			font-size: 2.5rem;
+			margin-left: auto;
+			outline: 0;
+		} 
+	}
+
+	form.form{ 
+		button.btn-primary{
+			margin-right: 1rem;
+		}
+	}
 }

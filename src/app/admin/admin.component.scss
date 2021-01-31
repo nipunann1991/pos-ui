@@ -5,6 +5,7 @@
     @include flex();
     height: 100%;
     width: 100%;
+    background: $ligher-gray;
 
     .left-nav-area{
         width: 7rem;
@@ -18,6 +19,14 @@
         padding-top: 5rem;
         padding-left: 7rem; 
         width: 100%;
+
+        &.shop-view{
+            padding-left: 0;
+
+            .header-area{ 
+                width: 100%;
+            }
+        }
 
         .header-area{ 
             position: fixed;

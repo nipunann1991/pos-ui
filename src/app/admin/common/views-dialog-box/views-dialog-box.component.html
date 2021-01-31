@@ -1,0 +1,5 @@
+
+<container-element [ngSwitch]="viewId">
+    <app-add-product (closeClicked)="closeDialog($event)" *ngSwitchCase="1"></app-add-product> 
+    <app-add-shop (closeClicked)="closeDialog($event)" *ngSwitchCase="2"></app-add-shop> 
+ </container-element>

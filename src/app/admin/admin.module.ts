@@ -5,13 +5,14 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { HeaderComponent } from './common/header/header.component';
 import { NavComponent } from './common/nav/nav.component';
-
+import { AppSharedModule } from "../app.shared.modules"; 
 
 @NgModule({
   declarations: [AdminComponent, HeaderComponent, NavComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AppSharedModule,
+    AdminRoutingModule, 
   ]
 })
 export class AdminModule { }

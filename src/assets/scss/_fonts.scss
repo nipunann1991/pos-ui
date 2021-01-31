@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 @font-face {
     font-family: 'icomoon';
     src:  url('../fonts/icomoon.eot?lrvrm');
@@ -25,6 +27,36 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-business-and-finance-1:before {
+    content: "\e907";
+  }
+  .icon-invoice:before {
+    content: "\e908";
+  }
+  .icon-cart:before {
+    content: "\e909";
+  }
+  .icon-result:before {
+    content: "\e90a";
+  }
+  .icon-cloud-computing:before {
+    content: "\e90b";
+  }
+  .icon-loupe:before {
+    content: "\e90c";
+  }
+  .icon-trash:before {
+    content: "\e90d";
+  }
+  .icon-edit:before {
+    content: "\e90e";
+  }
+  .icon-add:before {
+    content: "\e90f";
+  }
+  .icon-plus:before {
+    content: "\e910";
+  }
   .icon-business-and-finance:before {
     content: "\e900";
   }
@@ -46,4 +78,3 @@
   .icon-home:before {
     content: "\e906";
   }
-  

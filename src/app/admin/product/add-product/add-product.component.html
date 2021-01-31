@@ -1,0 +1,47 @@
+<div class="popup-wrapper">
+    <div class="popup-header">
+        <h2>Add Product</h2>
+        
+        <button type="button" class="close" aria-label="Close" (click)="close()">
+            <span aria-hidden="true">×</span>
+          </button>
+    </div>
+    <form class="form">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label for="">Product Name</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Barcodes</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                  </div> 
+                <div class="form-group">
+                    <label for="">Price</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div> 
+                <div class="form-group">
+                    <label for="">Discount</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div> 
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" id="" rows="3" cols="3" placeholder=""></textarea>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="image-upload-area">
+                    <div class="img-content-wrapper">
+                        <i class="icon-cloud-computing"></i>
+                        <p>Upload Image Here</p>
+                    </div>
+                    <input type="file" class="form-control" >
+                </div>
+            </div> 
+        </div>
+        <button mat-raised-button type="submit" class="btn btn-primary">Add Product</button>
+        <button mat-raised-button (click)="close()">Close</button>
+    </form>
+</div>
+

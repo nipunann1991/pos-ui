@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  isShopView: boolean = false;
+  animateView: string =  "";
 
-  ngOnInit(): void {
+  constructor(public router: Router) { 
+
+    this.router.events.subscribe((val) => { 
+      this.animateView = ""; //animated fadeIn
+      (this.router.url.includes("shop"))? this.isShopView = true:  this.isShopView = false;
+      setTimeout(() => { this.animateView = "" }, 1000);
+    })
+
   }
 
+  ngOnInit(): void {
+    
+     
+  }
+
+  
 }

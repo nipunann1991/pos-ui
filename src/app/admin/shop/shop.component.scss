@@ -1,0 +1,77 @@
+@import "../../../styles";
+
+
+.shops-list-wrapper{
+    //background-color: lighten($nav-color, 67%);
+    @include flex-center(); 
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+        font-weight: 700; 
+    }
+
+    ul.shops-list{ 
+        @include flex-center(); 
+        justify-content: center;
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 5rem;
+
+        li.shop{
+            @include calc('width', '20% - 1.5rem');
+            height: 25rem;
+            width: 25rem;
+            margin-right: 3rem;
+            border-radius: 1rem; 
+            background: $white; 
+            @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
+            @include flex-center(); 
+            @include transition( all 0.3s ease); 
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px $white solid;
+
+            &:first-child{ 
+                color: #4c4c4c;
+
+                button{ 
+
+                    i{
+                        font-size: 10rem;
+                    }
+                }
+            }
+
+            button{
+                width: 100%;
+                height: 100%;
+            }
+            
+            &:hover, &:focus{
+                outline: 0;
+                border-color: $basic-btn-color;
+
+                h3{
+                    color: $basic-btn-color;
+                }
+
+                i{
+                    color: $basic-btn-color;
+                }
+            }
+
+            h3{
+                font-size: 2.1rem;
+                margin-top: 1.5rem; 
+                font-weight: 700;
+                
+            }
+        }   
+    }
+}

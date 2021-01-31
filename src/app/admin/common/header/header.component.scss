@@ -9,6 +9,7 @@
 
     .hamburg-menu{
         margin-right: auto;
+        @include flex-center();
     }
 
     .admin-profile-wrapper{

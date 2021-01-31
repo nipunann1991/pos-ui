@@ -1,2 +1,11 @@
-<p>dashboard works!</p>
-
+<div class="dashboard-wrapper">
+  
+    <ul class="pages-list"> 
+        <li class="pages add-new" *ngFor="let product of productList"> 
+            <button mat-button  [routerLink]="product.url">
+                <i [class]="product.icon"></i>
+                <h2>{{product.title}}</h2>
+            </button> 
+       </li> 
+    </ul> 
+</div>
