@@ -1,11 +1,12 @@
 import { Component, OnInit, EventEmitter, Output , Input} from '@angular/core';
 
+
 @Component({
-  selector: 'app-add-product',
-  templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.scss']
+  selector: 'app-add-contact',
+  templateUrl: './add-contact.component.html',
+  styleUrls: ['./add-contact.component.scss']
 })
-export class AddProductComponent implements OnInit {
+export class AddContactComponent implements OnInit {
 
   @Output()
   closeClicked: EventEmitter<Boolean> = new EventEmitter<Boolean>();
@@ -23,5 +24,6 @@ export class AddProductComponent implements OnInit {
   close(){
     this.closeClicked.emit(true);
   }
+
 
 }

@@ -53,17 +53,16 @@
                 height: 100%;
             }
             
+             
+
             &:hover, &:focus{
                 outline: 0;
-                border-color: $basic-btn-color;
+                border-color: lighten($basic-btn-color, 25%);
 
-                h3{
-                    color: $basic-btn-color;
-                }
-
-                i{
-                    color: $basic-btn-color;
-                }
+                i, h3{
+                    color: lighten($basic-btn-color, 25%);
+                } 
+                
             }
 
             h3{

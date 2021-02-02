@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 700;
 }
 
+
  
 
 .btn-primary{
@@ -134,7 +135,7 @@ a{
 			margin-left: auto;
 			font-weight: 400;
 			line-height: 3.8rem;
-			background: $pink-color;
+			background: $pink-color; 
 
 			i.icon-plus{
 				position: relative;
@@ -201,31 +202,7 @@ a{
 	}
 }
 
-.popup-wrapper{ 
-
-	.popup-header{
-		border-bottom: 1px #6c6c6c solid;
-		padding-bottom: 1.2rem;
-		margin-bottom: 1.5rem;
-		@include flex();
-
-		h2{ 
-			font-weight: 900;
-			line-height: 1.1;
-			margin: 0;
-			padding: 0;
-		}
-
-		button.close{
-			font-size: 2.5rem;
-			margin-left: auto;
-			outline: 0;
-		} 
-	}
-
-	form.form{ 
-		button.btn-primary{
-			margin-right: 1rem;
-		}
-	}
+.mat-dialog-container{
+    padding: 2rem;
 }
+
