@@ -10,6 +10,11 @@ const routes: Routes = [
       { path: 'shop', loadChildren: () => import('../admin/shop/shop.module').then(m => m.ShopModule) },  
       { path: 'product', loadChildren: () => import('../admin/product/product.module').then(m => m.ProductModule) },
       { path: 'contact', loadChildren: () => import('../admin/contact/contact.module').then(m => m.ContactModule) },
+      { path: 'purchase-order', loadChildren: () => import('../admin/purchase-order/purchase-order.module').then(m => m.PurchaseOrderModule) },
+      { path: 'users', loadChildren: () => import('../admin/users/users.module').then(m => m.UsersModule) },
+      { path: 'invoice', loadChildren: () => import('../admin/invoice/invoice.module').then(m => m.InvoiceModule) },
+      { path: 'reports', loadChildren: () => import('../admin/reports/reports.module').then(m => m.ReportsModule) },
+      
     ] 
   },
 ];

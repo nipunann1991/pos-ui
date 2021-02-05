@@ -5,12 +5,12 @@ import { ViewsDialogBoxComponent } from "../common/views-dialog-box/views-dialog
 
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-invoice',
+  templateUrl: './invoice.component.html',
+  styleUrls: ['./invoice.component.scss']
 })
-export class ProductComponent implements OnInit {
- 
+export class InvoiceComponent implements OnInit {
+
   constructor(public dialog: MatDialog) { }
  
   ngOnInit(): void {
@@ -55,7 +55,4 @@ export class ProductComponent implements OnInit {
       
     });
   } 
-
 }
-
- 

@@ -7,6 +7,8 @@ import { AppSharedModule } from 'src/app/app.shared.modules';
 import { AddProductModule } from '../../product/add-product/add-product.module';
 import { AddShopModule } from '../../shop/add-shop/add-shop.module';
 import { AddContactModule } from '../../contact/add-contact/add-contact.module';
+import { AddUsersModule } from '../../users/add-users/add-users.module';
+import { AddPurchaseOrderModule } from '../../purchase-order/add-purchase-order/add-purchase-order.module';
 
 
 @NgModule({
@@ -17,8 +19,9 @@ import { AddContactModule } from '../../contact/add-contact/add-contact.module';
     AppSharedModule,
     AddProductModule,
     AddShopModule,
-    AddContactModule
-
+    AddContactModule,
+    AddUsersModule,
+    AddPurchaseOrderModule
   ], 
 })
 export class ViewsDialogBoxModule { }

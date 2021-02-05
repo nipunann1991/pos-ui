@@ -5,12 +5,12 @@ import { ViewsDialogBoxComponent } from "../common/views-dialog-box/views-dialog
 
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class ProductComponent implements OnInit {
- 
+export class UsersComponent implements OnInit {
+
   constructor(public dialog: MatDialog) { }
  
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
   openAddDialog(): void {
     const dialogRef = this.dialog.open(ViewsDialogBoxComponent, {
       width: '800px',
-      data: {view_id: 1, isEditPage: false }
+      data: {view_id: 4, isEditPage: false }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -33,7 +33,7 @@ export class ProductComponent implements OnInit {
   openEditDialog(): void {
     const dialogRef = this.dialog.open(ViewsDialogBoxComponent, {
       width: '800px',
-      data: {view_id: 1, isEditPage: true }
+      data: {view_id: 4, isEditPage: true }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -46,7 +46,7 @@ export class ProductComponent implements OnInit {
   openDeleteDialog(): void {
     const dialogRef = this.dialog.open(ConfirmDialogBoxComponent, {
       width: '400px',
-      data: {view_id: 1, title: "Delete Product", message: "Are you sure you want to delete this?" }
+      data: {view_id: 4, title: "Delete User", message: "Are you sure you want to delete this?" }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -56,6 +56,7 @@ export class ProductComponent implements OnInit {
     });
   } 
 
-}
 
- 
+  
+
+}

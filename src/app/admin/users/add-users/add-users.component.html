@@ -1,0 +1,37 @@
+<div class="popup-wrapper">
+    <div class="popup-header">
+        <h2>{{ pageData.pageTypeTitle }} Users</h2>
+        
+        <button type="button" class="close" aria-label="Close" (click)="close()">
+            <span aria-hidden="true">×</span>
+          </button>
+    </div>
+    <form class="form">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">User Name</label>
+                    <input type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                </div> 
+                <div class="form-group">
+                    <label for="">User Role</label>
+                    <select type="text" class="form-control" id="" placeholder="">
+                        <option value="">Admin</option>
+                        <option value="">Manager</option>
+                    </select>
+                </div>  
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                  </div> 
+                <div class="form-group">
+                    <label for="">Retype Password</label>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div> 
+            </div>
+        </div>
+        <button mat-raised-button type="submit" class="btn-primary">{{ pageData.pageTypeTitle }} Product</button>
+        <button mat-raised-button (click)="close()">Close</button>
+    </form>
+</div>
+
