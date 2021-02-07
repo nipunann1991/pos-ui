@@ -56,8 +56,15 @@ h1,h2,h3,h4,h5,h6{
 	}
 }
 
-.mat-body, .mat-body-1, .mat-typography, .mat-button, .mat-raised-button{
+.mat-body, .mat-body-1, .mat-typography, .mat-button, .mat-raised-button, .mat-radio-button, .mat-checkbox-label{
 	font-family: 'Lato', sans-serif;
+}
+
+.mat-radio-button{
+	label{
+		margin-right: 1.5rem;
+		color: #5d5d5d;
+	}
 }
 
 
@@ -153,6 +160,43 @@ a{
 		@include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
 		padding: 3rem;
 		border-radius: 0.5rem; 
+
+		&.filter-box{
+			margin-bottom: 3rem;
+
+			h3{
+				font-weight: 600;
+				font-size: 2rem;
+			}
+
+			.mat-radio-button{
+				label{
+					margin-right: 4.5rem;
+				}
+			}
+
+			.date-range{ 
+				margin-top: 1.5rem;
+				padding-top: 2.5rem;
+				border-top: 1px #dedede solid;
+
+				.inline-fg{
+					margin-bottom: 0;
+					height: 100%;
+					@include flex-center();
+
+					&.form-group-disabled{
+						opacity: 0.7;
+					}
+
+					label{
+						width: 15rem;
+					}
+
+					
+				}
+			}
+		}
 
 		form.search-input{
 			width: 30rem;

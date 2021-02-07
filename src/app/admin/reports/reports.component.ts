@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportsComponent implements OnInit {
 
+  isAllRecords: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  allRecords(e: any){
+    this.isAllRecords = e.checked;
   }
 
 }

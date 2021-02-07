@@ -15,7 +15,7 @@ export class AdminComponent implements OnInit {
 
     this.router.events.subscribe((val) => { 
       this.animateView = ""; //animated fadeIn
-      (this.router.url.includes("shop"))? this.isShopView = true:  this.isShopView = false;
+      (this.router.url.includes("shop") || this.router.url.includes("sales-view"))? this.isShopView = true:  this.isShopView = false;
       setTimeout(() => { this.animateView = "" }, 1000);
     })
 

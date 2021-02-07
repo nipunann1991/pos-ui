@@ -46,7 +46,7 @@ export class InvoiceComponent implements OnInit {
   openDeleteDialog(): void {
     const dialogRef = this.dialog.open(ConfirmDialogBoxComponent, {
       width: '400px',
-      data: {view_id: 1, title: "Delete Product", message: "Are you sure you want to delete this?" }
+      data: {view_id: 1, title: "Delete Invoice", message: "Are you sure you want to delete this?" }
     });
 
     dialogRef.afterClosed().subscribe(result => {

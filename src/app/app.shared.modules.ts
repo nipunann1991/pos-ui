@@ -17,7 +17,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http'; 
 import {MatTableModule} from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
- 
+import { OverlayscrollbarsModule } from "overlayscrollbars-ngx";
+
 @NgModule({
   declarations: [
    
@@ -41,7 +42,8 @@ import { MatInputModule } from '@angular/material/input';
       MatDatepickerModule,  
       MatRadioModule, 
       MatTableModule,
-      MatInputModule
+      MatInputModule,
+      OverlayscrollbarsModule
     ],
   exports: [  
     FormsModule,
@@ -62,7 +64,8 @@ import { MatInputModule } from '@angular/material/input';
     MatDatepickerModule,  
     MatRadioModule, 
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    OverlayscrollbarsModule
   ],
   
 })

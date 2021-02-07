@@ -14,7 +14,7 @@ const routes: Routes = [
       { path: 'users', loadChildren: () => import('../admin/users/users.module').then(m => m.UsersModule) },
       { path: 'invoice', loadChildren: () => import('../admin/invoice/invoice.module').then(m => m.InvoiceModule) },
       { path: 'reports', loadChildren: () => import('../admin/reports/reports.module').then(m => m.ReportsModule) },
-      
+      { path: 'sales-view', loadChildren: () => import('../admin/sales-view/sales-view.module').then(m => m.SalesViewModule) },
     ] 
   },
 ];

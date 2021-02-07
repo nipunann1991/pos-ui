@@ -3,6 +3,37 @@
         <div class="page-title-area">
             <h1>Reports</h1> 
         </div>
+        <div class="white-box-panel filter-box">
+            <h3>Filter Results By:</h3>  
+            <mat-radio-group >
+              <mat-radio-button value="after">Order Date</mat-radio-button>
+              <mat-radio-button value="before">Type</mat-radio-button>
+              <mat-radio-button value="clients">Clients</mat-radio-button>
+              <mat-radio-button value="weekly">Weekly Report</mat-radio-button>
+              <mat-radio-button value="monthly">Monthly Report</mat-radio-button>
+            </mat-radio-group>
+           <div class="date-range">
+             <div class="row">
+              <div class="col-md-4">
+                <div class="form-group inline-fg" [ngClass]="{'form-group-disabled': isAllRecords}">
+                  <label for="">Start Date</label>
+                  <input type="date" class="form-control" id="" placeholder="" [disabled]="isAllRecords">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group inline-fg" [ngClass]="{'form-group-disabled': isAllRecords}"> 
+                  <label for="">End Date</label>
+                  <input type="date" class="form-control" id="" placeholder="" [disabled]="isAllRecords"> 
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group inline-fg"> 
+                  <mat-checkbox (change)="allRecords($event)">All records</mat-checkbox>
+                </div>
+              </div>
+             </div> 
+           </div>  
+        </div>
         <div class="white-box-panel">
             <form class="search-input">
               <div class="form-group"> 
