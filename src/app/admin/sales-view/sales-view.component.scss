@@ -12,23 +12,32 @@
         height: 100%;
         overflow: hidden;
         margin-left: auto;
+
+        .os-host-resize-disabled.os-host-scrollbar-horizontal-hidden > .os-scrollbar-vertical { 
+            padding: 25px 2px;
+        }
         
         .categories{
             height: 100%;
             width: 20rem;
+            padding: 1.5rem; 
+            background: $white;
+            border-radius: 1rem;
+            @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08)); 
 
             ul.categories-list{
                 padding-left: 0;
+                padding-bottom: 1rem;
 
                 li{
                     margin-bottom: 1rem;
+                    list-style-type: none;
                     
                     button{
-                        @include calc("width", "100% - 2rem");
+                        @include calc("width", "100% - 0rem");
                         background: $blue-color;
                         color: $white;
-                        border-radius: 0.5rem;
-                        margin-right: 1.5rem;
+                        border-radius: 0.5rem; 
                         line-height: 9.5rem !important;
                          
                     }
@@ -38,15 +47,17 @@
 
         .items{
             height: 100%; 
-            padding: 1.5rem 2.5rem;
+            padding: 1.5rem 2.5rem; 
+            padding-top: 0;
             @include calc("width", "100% - 20rem");
 
             .items-header{
                 padding: 1.5rem;
-                padding-top: 0;
-                border-bottom: 1px $form-control-border-color solid;
                 @include flex();
                 align-items: center;
+                background: $white;
+                border-radius: 1rem;
+                @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
 
                 form.search-input{
                     width: 30rem; 
@@ -69,6 +80,8 @@
                             font-size: 1.6rem;
                             min-height: 3.4rem;
                             margin-bottom: 0;
+                            border-radius: 2rem;
+                            line-height: 2.3;
                         }
                     }
         
