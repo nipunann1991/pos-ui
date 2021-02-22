@@ -38,19 +38,26 @@
 
             &:hover, &:focus{
                 outline: 0;
-                border-color: lighten($basic-btn-color, 25%);
+                border-color: lighten($basic-btn-color, 25%); 
 
                 i, h2{
                     color: lighten($basic-btn-color, 25%);
                 } 
+
+                i{ 
+                    @include icon-gradient(#bf29ff, #6200ff);
+                }
                 
             }
 
             i{
-                font-size: 6rem;
+                font-size: 6rem; 
+                @include icon-gradient(#6200ff, #bf29ff);
             }
 
             h2{
+                font-weight: 600;
+                font-size: 1.8rem;
                 margin-top: 2rem;
             }
         }

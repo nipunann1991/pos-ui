@@ -8,8 +8,10 @@
         height: 3.5rem;
         border-radius: 50%;
         display: block;
-        margin: auto;
-        @include background-opacity($white, 0.2)
+        margin: auto; 
+        background-image: url('/assets/images/profile.svg');
+        background-size: cover;
+        
     }
 }
 
@@ -29,6 +31,11 @@ ul.main-nav{
             text-decoration: none;
 
             &:hover{
+                @include background-opacity($white, 0.2);
+                color: $white;
+            }
+
+            &.active{
                 background: $white;
                 color: $nav-color;
             }

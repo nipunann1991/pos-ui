@@ -59,6 +59,10 @@
                 border-radius: 1rem;
                 @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
 
+                h2{
+                    margin: 0;
+                }
+
                 form.search-input{
                     width: 30rem; 
                     position: relative; 
@@ -90,25 +94,86 @@
             
             }
 
-            ul.items-list{
-                padding-left: 0;
+            .items-wrapper{
+                width: 100%;
+                margin-top: 1.5rem;
+                background: $white;
+                border-radius: 1rem;
+                @include calc("height", "100% - 6rem");
+                @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
+            
+                .items-list{
+                    padding: 3rem;
 
-                li{
-                    margin-bottom: 1rem;
-                    
-                    button{
-                        @include calc("width", "100% - 2rem");
-                        background: $blue-color;
-                        color: $white;
-                        border-radius: 0.5rem;
-                        margin-right: 1.5rem;
-                        line-height: 9.5rem !important;
+                    .item{
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        margin-bottom: 2rem;
                          
+                        @include breakpoint($medium-desktop){
+                            flex: 0 0 33.33%;
+                            max-width: 33.33%;
+                        }
+
+                        @include breakpoint($x-large-desktop){
+                            flex: 0 0 25%;
+                            max-width: 25%;
+                        }
+                        
+                        a.item-inner{
+                            color: $text-color;
+                            width: 100%; 
+                            border: 1px lighten( $form-control-border-color, 6%) solid;
+                            border-radius: 1rem;
+                            padding: 0;
+                            overflow: hidden;
+                            text-decoration: none;
+                            text-align: left;
+                            white-space: break-spaces;
+                            line-height: 0rem !important; 
+                            cursor: pointer;
+                            @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
+                              
+                            .item-img{
+                                width: 100%;
+                                height: 16rem;
+                                background: #000; 
+                                background-color: darken($border-color, 7%);
+                                @include fallback_img();
+                            }
+    
+                            .item-desc{
+                                padding: 1.5rem;
+                                color: $text-color;
+    
+                                h3{
+                                    font-size: 1.6rem;
+                                    margin-bottom: 1rem;
+                                    color: inherit;
+                                    word-wrap: break-word;
+                                }
+    
+                                p{
+                                    font-size: 1.2rem;
+                                    line-height: 1.5rem;
+                                    font-weight: 400;
+                                    margin-bottom: 1.5rem;
+                                    color: lighten($text-color, 40%);
+                                    word-wrap: break-word;
+                                }
+
+                                span.price{
+                                    font-size: 1.4rem;
+                                    line-height: 1.5rem;
+                                }
+                            }
+                        
+                        } 
                     }
                 }
-            }
-
-             
+            } 
         }
         
 
@@ -139,23 +204,89 @@
                 font-size: 1.8rem;
                 margin-bottom: 0;
                 color: $basic-btn-color;
+                font-weight: 500;
+                @include flex(); 
+
+                i{
+                    font-size: 2.3rem;
+                    margin-right: 0.5rem;
+                }
             }
 
             .time{
-                margin-left: auto;
-                @include flex(); 
-                flex-direction: row;
+                margin-left: auto;  
+                text-align: right;
+                line-height: 1.5rem;
                 color: $darker-gray-color;
 
                 i{
                     font-size: 1.2rem;
-                    font-style: normal;
-                    margin-right: 1rem;
+                    font-style: normal; 
+                    display: block;
                 }
 
                 span{
                     font-size: 1.2rem;
                     font-weight: 600;
+                }
+            }
+        }
+
+        .items-panel{ 
+            width: 100%;
+            font-size: 1.3rem;
+            @include calc("height", "100% - 6rem");
+
+            overlay-scrollbars{
+                height: 100%;
+                width: 100%;
+            }
+
+            ul.invoice-item-list{
+                padding-left: 0;
+
+                li.item{
+                    padding: 1rem;
+                    list-style-type: none;
+                    @include flex(); 
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px $form-control-border-color solid;
+
+                    .item-name{ 
+                        width: 100%;
+                        .name{
+                            font-weight: 600;
+                            display: block;
+                        }
+
+                        .code{
+                            color: lighten($text-color, 40%);
+                            font-size: 1.1rem;
+                            display: block;
+                        }
+                    }
+
+                    .qty{ 
+
+                        input.form-control{
+                            font-size: 1.3rem;
+                            width: 5rem;
+                        }
+                    }
+
+                    .price{
+                        width: 15rem;
+                        margin-right: 1rem;
+                        text-align: right;
+                    }
+
+                    .remove-item{
+                        a{
+                            color: $danger-color;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
@@ -172,19 +303,18 @@
                 
                 li{
                     @include flex(); 
-                    font-size: 1.45rem;
+                    font-size: 1.4rem;
                     color: $darker-gray-color;
-                    padding: 0.25rem 2rem;
+                    padding: 0.1rem 2rem;
                     font-weight: 600;
 
                     &.total{ 
                         border-top: 1px $form-control-border-color solid;
                         margin-top: 1rem;
                         padding: 1rem 2rem;
-                        font-size: 2rem;
-                        font-weight: 700; 
-                        color: $white;
-                        background-color: $basic-btn-color;
+                        font-size: 2rem; 
+                        color: $white; 
+                        @extend .two-tone_btn;
                         border-radius: 0.5rem;
                     }
 
@@ -207,10 +337,10 @@
                 line-height: 1.8rem !important;
                 border-radius: 0.5rem; 
                 @include box-shadow(0, 0.1rem, 1rem, 0, rgba(0, 0, 0, 0.08));
+                color: $white; 
 
                 &.discard-btn{
-                    @include background-opacity($danger-color, 0.2);
-                    color: $danger-color; 
+                    background-color: $danger-color; 
                 }
 
                 &.discount-btn{
@@ -219,8 +349,7 @@
                 }
 
                 &.print-btn{
-                    @include background-opacity($blue-color, 0.2);
-                    color: $blue-color; 
+                    background: #ff8500; 
                 }
 
                 i{

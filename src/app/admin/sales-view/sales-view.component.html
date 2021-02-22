@@ -1,23 +1,15 @@
 <div class="container-fluid pos-screen">
     <div class="items-n-categories-wrapper">
         
-             <overlay-scrollbars class="categories"> 
+             <overlay-scrollbars class="categories" [options]="{ scrollbars: { autoHide: 'scroll' } }"> 
                 <ul class="categories-list">
-                    <li><button mat-raised-button>Category #1</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li>
-                    <li><button mat-raised-button>Category #2</button></li> 
+                    <li *ngFor="let category of categoryList"><button mat-raised-button>{{ category.name }}</button></li> 
                  </ul> 
              </overlay-scrollbars>
 
              <div class="items"> 
                 <div class="items-header">
-                    <h2>Category #1</h2>
+                    <h2>Popular Items</h2>
                     <form class="search-input">
                         <div class="form-group"> 
                             <i class="search-icon icon-loupe"></i>
@@ -25,35 +17,97 @@
                         </div>
                     </form>
                 </div>
-                <overlay-scrollbars>
-                    <ul class="items-list">
-                       
-                    </ul> 
-                </overlay-scrollbars> 
+                <div class="items-wrapper">
+                    <overlay-scrollbars  [options]="{ scrollbars: { autoHide: 'scroll' } }">
+                        <div class="items-list">
+                            <div class="row">
+                                <div class="item" *ngFor="let item of itemsList">
+                                    <a mat-button class="item-inner">
+                                        <div *ngIf="item.image != null" class="item-img" [ngStyle]="{'background-image': 'url(/assets/images/'+item.image+')', 'background-size': 'cover' }"></div>
+                                        <div *ngIf="item.image == null" class="item-img"></div>
+                                        <div class="item-desc">
+                                            <h3>{{item.name}}</h3>
+                                            <p>{{item.description}}</p>
+                                            <span class="price">Rs {{item.price}}</span>
+                                        </div>
+                                    </a> 
+                                </div>  
+                            </div>
+                        </div>
+                    </overlay-scrollbars> 
+                </div> 
             </div>
             
          
     </div>
     <div class="checkout-panel">
         <div class="checkout-header">
-            <h2>Inv #0007</h2>
+            <h2><i class="icon-invoice"></i> 51207</h2>
             <div class="time"> 
-                <i>Invoice Time</i>
+                <i><span class="icon-clock"></span> 23-02-2021</i>
                 <span>08:03 pm</span>
             </div>
         </div>
         <div class="items-panel">
-
+            <overlay-scrollbars  [options]="{ scrollbars: { autoHide: 'scroll' } }">
+                <ul class="invoice-item-list">
+                    <li class="item">
+                        <div class="item-name">
+                            <span class="name">Chicken Cheese Kottu</span>
+                            <span class="code">#18566</span>
+                        </div>
+                        <div class="qty">
+                            <input type="number" value="1" class="form-control">
+                        </div>
+                        <div class="price">
+                            <span>500.00</span>
+                        </div>
+                        <div class="remove-item">
+                            <a href="javascript:void(0)" (click)="openDeleteItem()"><i class="icon-trash"></i></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="item-name">
+                            <span class="name">Coke 200ml</span>
+                            <span class="code">#10254</span>
+                        </div>
+                        <div class="qty">
+                            <input type="number" value="1" class="form-control">
+                        </div>
+                        <div class="price">
+                            <span>60.00</span>
+                        </div>
+                        <div class="remove-item">
+                            <a href="javascript:void(0)" (click)="openDeleteItem()"><i class="icon-trash"></i></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="item-name">
+                            <span class="name">Chocolate Ice Cream</span>
+                            <span class="code">#00752</span>
+                        </div>
+                        <div class="qty">
+                            <input type="number" value="1" class="form-control">
+                        </div>
+                        <div class="price">
+                            <span>80.00</span>
+                        </div>
+                        <div class="remove-item">
+                            <a href="javascript:void(0)" (click)="openDeleteItem()"><i class="icon-trash"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </overlay-scrollbars>
         </div>
         <div class="checkout-footer">
           <ul class="total-amount">
-            <li>Sub Total <span>0.00</span></li>
-            <li>Tax <span>0.00</span></li>
-            <li class="total">Total <span>0.00</span></li>
+            <li>Sub Total <span>640.00</span></li>
+            <li>Tax <span>121.00</span></li>
+            <li class="total">Total <span>761.00</span></li>
           </ul>
         </div>
         <div class="action-btns">
-            <button mat-raised-button class="discard-btn"><i class="icon-trash"></i>  Discard</button> 
+            <button mat-raised-button class="discard-btn" (click)="openDeleteDialog()"><i class="icon-trash"></i>  Discard</button> 
             <button mat-raised-button class="print-btn"><i class="icon-cart"></i> Checkout</button>
         </div>
      </div>

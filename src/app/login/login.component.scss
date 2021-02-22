@@ -52,9 +52,15 @@
                     }
 
                     button.login-btn{
-                        background-color: $basic-btn-color;
+                        //background-color: $basic-btn-color;
                         border-radius: 5rem;
                         margin-top: 2rem;
+                        @extend .two-tone_btn;
+
+                        &:hover{
+                            @extend .two-tone_btn;
+                            opacity: 0.9;
+                        }
                     }
 
                     .form-label-group {
@@ -115,6 +121,7 @@
           
         p.sign-up-link{
             margin-top: 2rem;
+            font-size: 1.3rem;
             text-align: center;
         }
           

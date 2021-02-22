@@ -7,7 +7,7 @@
 //$font-family-reg: Arial, Helvetica, sans-serif !default; 
 
 /// Code (monospace) font family
-$code-font: 'Hind Siliguri', sans-serif; 
+$code-font: 'Poppins', sans-serif; 
 
  
 /// Base font sizes for small and large screens
@@ -22,21 +22,22 @@ $h1-font-size: 60px;
 $h2-font-size: 36px;
 $h3-font-size: 25px;
 $h4-font-size: 19px;
-$base-font-size: 15px;
+$base-font-size: 1.5rem;
 
 
 /// Main brand colours
  // #003b95;   
 $white: #ffffff;
 $ligher-gray: #f2f2f2;
-$bg-lighter-color: #F4F7FC;
+$bg-lighter-color: #e8eaff;
 $border-color: #f3f3f3; 
 $darker-gray-color: #6f6f6f;
 $form-control-border-color: #ced4da;
 $google-color: #ea4335; 
 $facebook-color: #3b5998; 
 $basic-btn-color: #390095;
-$danger-color: #f74b63; 
+$danger-color: #e80000; 
+$success-color: #00a700; 
 $yellow-color: #ffc115; 
 $blue-color: #198cff; 
 $nav-color: $basic-btn-color;

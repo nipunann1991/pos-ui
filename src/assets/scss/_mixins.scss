@@ -192,6 +192,17 @@
 } 
 
 
+@mixin icon-gradient($color1, $color2){
+  background:-moz-linear-gradient(top, $color1 0%, $color2 100%); 
+  background: -webkit-linear-gradient(top, $color1 0%, $color2 100%); 
+  background: linear-gradient(to bottom, $color1 0%, $color2 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+
 @mixin font-size($size:1.6, $line: $size * 1.5){
     font-size:   ($size * 10) + px;
     line-height: ($line * 10) + px;

@@ -4,11 +4,8 @@
 </div> 
 
 <ul class="main-nav">
-    <li><a mat-button routerLink="/admin/dashboard"><i class="icon-home"></i></a></li>
-    <li><a mat-button href=""><i class="icon-shopping-bag"></i></a></li>
-    <li><a mat-button href=""><i class="icon-business-and-finance"></i></a></li>
-    <li><a mat-button href=""><i class="icon-phone-call"></i></a></li>
-    <li><a mat-button href=""><i class="icon-settings"></i></a></li>
+    <li *ngFor="let nav of navItems"><a mat-button [title]="nav.title" [routerLink]="nav.url" routerLinkActive="active"><i [class]="nav.icon"></i></a></li>
+     
 </ul>
 
  

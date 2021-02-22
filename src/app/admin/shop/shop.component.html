@@ -9,6 +9,7 @@
        </li>
         <li class="shop" *ngFor="let shop of shopList" [routerLink]="shop.shop_url">
             <button mat-button>
+                <!-- <i class="icon-shop"></i> -->
                 <img [src]="shop.image_url" alt="">
                 <h3>{{ shop.shop_name }}</h3>
             </button> 

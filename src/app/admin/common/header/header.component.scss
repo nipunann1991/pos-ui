@@ -27,12 +27,14 @@
                 border-radius: 50%;
                 display: block;
                 margin: auto;
-                background: #eee;
+                background-image: url('/assets/images/profile.svg');
+                background-size: cover;
             }
 
             span.user-name{
                 margin-left: 1.5rem;
                 margin-bottom: 0;
+                font-size: 1.4rem;
             }
             
         }
