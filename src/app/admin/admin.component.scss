@@ -3,14 +3,14 @@
 
 .page-content-wrapper{
     @include flex();
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background: $bg-lighter-color;
 
     .left-nav-area{
         width: 7rem;
         background: $nav-color;
-        height: inherit;
+        height: 100%;
         position: fixed;
         left: 0;
     }
@@ -18,7 +18,7 @@
     .right-content-area{
         padding-top: 5rem;
         padding-left: 7rem; 
-        width: 100%;
+        width: 100%; 
 
         &.shop-view{
             padding-left: 0;
@@ -34,6 +34,7 @@
             @include calc('width', '100% - 7rem');
             right: 0;
             top: 0;
+            z-index: 1;
         }
         
     }

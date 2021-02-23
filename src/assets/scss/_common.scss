@@ -48,8 +48,11 @@ h1,h2,h3,h4,h5,h6{
  
 
 .btn-primary{
-	background: lighten($basic-btn-color, 15%);
+	@extend .two-tone_btn; 
 }
+
+
+
 
 .mat-body, .mat-body-1, .mat-typography, .mat-button, .mat-raised-button, .mat-radio-button, .mat-checkbox-label{
 	font-family: $code-font;
@@ -221,6 +224,9 @@ a{
 		}
 
 		.table{
+			margin-bottom: 0;
+			border-bottom: 1px solid #dee2e6;
+
 			thead{
 				line-height: 2.5rem;
 				background: #f8f8f8;
@@ -233,9 +239,27 @@ a{
 				line-height: 2.5rem;
 				padding: 0.5rem 1.5rem;
 				font-size: 1.4rem;
+				vertical-align: middle;
+
+				.product-img{
+					width: 8rem;
+					height: 7rem;
+					background-color: #eee;
+					background-size: 1.5rem;
+					@include fallback_img();
+				}
+
+
+				.customer-img{
+					width: 6rem;
+					height: 6rem;
+					background-color: #eee;
+					background-size: 1rem;
+					@include fallback_img();
+				}
 
 				&:last-child{
-					@include flex-center();
+					//@include flex-center();
 				}
 
 				a{
@@ -250,11 +274,12 @@ a{
 					&.edit-btn{
 						margin-right: 1rem;
 						color: lighten($text-color, 25%);
+						float: left;
 					}
 
 					&.delete-btn{
 						background-color: $danger-color;
-						
+						float: left; 
 						
 					}
 				}

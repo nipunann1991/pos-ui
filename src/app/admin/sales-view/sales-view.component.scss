@@ -1,7 +1,7 @@
 @import "../../../styles";
 
-.pos-screen{
-    height: 100%;
+.pos-screen{ 
+    @include calc("height", "100vh - 5rem");
     width: 100%;
     padding: 2rem;
     @include flex();
@@ -9,8 +9,7 @@
     .items-n-categories-wrapper{
         @include calc("width", "100% - 40rem");
         @include flex();
-        height: 100%;
-        overflow: hidden;
+        height: 100%; 
         margin-left: auto;
 
         .os-host-resize-disabled.os-host-scrollbar-horizontal-hidden > .os-scrollbar-vertical { 
@@ -35,7 +34,7 @@
                     
                     button{
                         @include calc("width", "100% - 0rem");
-                        background: $blue-color;
+                        background: #7919ff;
                         color: $white;
                         border-radius: 0.5rem; 
                         line-height: 9.5rem !important;

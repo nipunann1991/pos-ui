@@ -1,0 +1,209 @@
+@import "../../../../styles";
+
+.invoice-view{ 
+    padding: 5rem 0; 
+
+    ul{ 
+        padding-left: 0;
+
+        li{
+            list-style: none;
+        }
+    }
+
+    .invoice{
+        padding: 4rem 4rem;
+        height: auto;
+        overflow: hidden;
+        background-color: $white;
+
+        .company-logo{
+            @include flex();
+            align-items: center; 
+
+            .logo{
+                width: 15rem;
+                height: 10rem;
+                background: #eeeeee;
+                margin-right: 2.5rem;
+            }
+
+            .title-tagline{
+                h2{
+                    font-size: 2.4rem; 
+                    margin-bottom: 0.5rem;
+                }
+
+                ul{
+                    font-size: 1.35rem;
+                    margin-bottom: 0;
+                    padding-left: 0;
+
+                    li{
+                        list-style: none;
+                        line-height: 1.7rem; 
+                        color: $darker-gray-color;
+
+                        &.address{
+                            font-size: 1.5rem;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        &.tel{
+                            font-size: 1.25rem;
+                        }
+                    }
+                } 
+            } 
+        }
+
+        .invoice-title{
+            padding: 2.5rem 0;
+            position: relative;
+            overflow: hidden;
+
+            &:before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2rem;
+                background: lighten($basic-btn-color, 30%);
+                top: 38%;
+                left: 0;
+                z-index: 1;
+            }
+
+            h1{
+                text-transform: uppercase;
+                font-size: 4rem;
+                font-weight: 700;
+                text-align: right;
+                letter-spacing: 0.3rem; 
+                position: relative;
+                z-index: 10; 
+                background: $white;
+                display: inline-block;
+                float: right;
+                padding: 0  2.5rem;
+                margin-right: 15%;
+            }
+        }
+
+        .invoice-data-wrapper{
+            @include flex();
+
+            .invoice-data{
+                margin-right: auto;
+
+                ul{
+                    font-size: 1.35rem;
+                    margin-bottom: 0;
+                    padding-left: 0;
+    
+                    li{
+                        list-style: none;
+                        line-height: 2rem; 
+                        color: $darker-gray-color;
+    
+                        &.address{
+                            font-size: 1.5rem;
+                            margin-bottom: 0.5rem;
+                        } 
+                    }
+                }
+            }
+
+            .inv-details{
+                margin-left: auto;
+                text-align: right;
+
+                p{
+                    margin-bottom: 0;  
+
+                    &.inv-id{
+                        font-size: 2.5rem;
+                        color: $text-color;
+                    }
+                }
+            } 
+        }
+
+        table.invoice-item{
+            border-bottom: 1px solid #dee2e6;
+            margin-top: 3rem;
+            font-size: 1.5rem;
+
+
+            thead{
+				line-height: 3.5rem;
+				background: #f8f8f8;
+
+				th{
+					border-bottom: 0;
+				}
+			}
+            
+			td, th{
+				line-height: 2.5rem;
+				padding: 1rem 1.5rem; 
+				vertical-align: middle;
+
+                &:last-child{
+					width: 12rem;
+				}
+            }
+        }
+
+        .inv-footer{
+            @include flex();
+
+            .terms-n-conditions{
+                margin-top: 3.5rem;
+                width: 45%;
+
+                h3{
+                    font-size: 1.7rem;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+
+            .sub-total{
+                margin-left: auto;
+                ul{
+                    float: right;
+                    margin-top: 1rem;
+    
+                    li{
+                        font-size: 1.7rem;
+                        margin-right: 5.5rem; 
+                        margin-bottom: 0.5rem;
+    
+                        strong{ 
+                            width: 15rem;
+                            text-align: right;
+                            display: inline-block;
+                            padding-right: 3.5rem;
+                        }
+    
+                        span{
+                           float: right;
+                        }
+    
+                        &:last-child{
+                            margin-top: 2.5rem;
+                            color: $white;
+                            background: lighten($basic-btn-color, 30%);
+                            padding: 1rem 2rem; 
+                            margin-right: 4rem; 
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
